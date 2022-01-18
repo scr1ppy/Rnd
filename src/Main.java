@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,7 +11,7 @@ public class Main {
 
     private void run() {
         Random random = new Random();
-        int[] mass = fillMass(20);
+        int[] mass = fillMass();
         int j = 1;
         int maxJ = mass[0];
         while(j < mass.length){
@@ -24,7 +25,8 @@ public class Main {
         }
 
 
-    private int[] fillMass(int n) {
+    private int[] fillMass() {
+        int n = new Scanner(System.in).nextInt();
       int[] mass = new int[n];
         Random random = new Random();
         for (int i = 0; i < n; i++) {
