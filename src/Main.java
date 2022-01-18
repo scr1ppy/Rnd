@@ -13,9 +13,11 @@ public class Main {
         int[] mass = fillMass(20);
         int j = 1;
         int maxJ = mass[0];
-        while(j < mass.length){
-            if(mass[j]>maxJ) maxJ = mass[j];
+        if (j < mass.length) {
+            do {
+                if (mass[j] > maxJ) maxJ = mass[j];
                 j++;
+            } while (j < mass.length);
         }
         System.out.println(maxJ);
 
